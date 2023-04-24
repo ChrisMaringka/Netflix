@@ -1,0 +1,20 @@
+As the name suggest, this is pretty much a documentation of what went well, what didn't, what was supposed to happen but ended up not happening etc. It will be updated as the time goes.
+
+
+
+April 21, 2023
+
+Initiation of the project. The goal is to combine the data from Kaggle with some random CSV made in Excel (Netflix_user, Netflix_session), and load it to MySQL. Major painpoint is loading the csv file to SQL as table data import wizard is not running properly. Resolved by adjusting the local_infile to be true, and running Load Data Local Infile instead.
+
+
+
+April 24, 2023
+
+Figured that it would be interesting to adjust director, cast, and movie genre into binary data for further analysis. Out of the three, ended up only doing movie genre as the laptop started to overheat and crash more than once. Got that sudden realization that when people are boasting that they are doing an analysis combining various databases, it pretty much mean they probably have an expensive gaming PC.
+
+Major milestone:
+- Converted the netflix_title to have the listed_in column into binary data, and loaded it to MySQL
+- A few data cleansing and the start of this documentation (while I still remember)
+
+Next step:
+- Would need to start querying on MySQL to get the view for analysis ASAP

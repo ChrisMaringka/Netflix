@@ -1,16 +1,22 @@
-As the name suggest, this is pretty much a documentation of what went well, what didn't, what was supposed to happen but ended up not happening etc. It will be updated as the time goes.
+As the name suggest, this is pretty much a documentation of what went well, what didn't, what was supposed to happen 
+but ended up not happening etc. It will be updated as the time goes.
 
 
 
 April 21, 2023
 
-Initiation of the project. The goal is to combine the data from Kaggle with some random CSV made in Excel (Netflix_user, Netflix_session), and load it to MySQL. Major painpoint is loading the csv file to SQL as table data import wizard is not running properly. Resolved by adjusting the local_infile to be true, and running Load Data Local Infile instead.
+Initiation of the project. The goal is to combine the data from Kaggle with some random CSV made in Excel 
+(Netflix_user, Netflix_session), and load it to MySQL. Major painpoint is loading the csv file to SQL as table data import 
+wizard is not running properly. Resolved by adjusting the local_infile to be true, and running Load Data Local Infile instead.
 
 
 
 April 24, 2023
 
-Figured that it would be interesting to adjust director, cast, and movie genre into binary data for further analysis. Out of the three, ended up only doing movie genre as the laptop started to overheat and crash more than once. Got that sudden realization that when people are boasting that they are doing an analysis combining various databases, it pretty much mean they probably have an expensive gaming PC.
+Figured that it would be interesting to adjust director, cast, and movie genre into binary data for further analysis. 
+Out of the three, ended up only doing movie genre as the laptop started to overheat and crash more than once. 
+Got that sudden realization that when people are boasting that they are doing an analysis combining various databases, 
+it pretty much mean they probably have an expensive gaming PC.
 
 Major milestone:
 - Converted the netflix_title to have the listed_in column into binary data, and loaded it to MySQL
@@ -18,3 +24,29 @@ Major milestone:
 
 Next step:
 - Would need to start querying on MySQL to get the view for analysis ASAP
+
+May 1, 2023
+
+My laptop makes whirring noise whenever I run MySQL, and It started to kill my soul. Luckily I was able to convert the 
+query result to csv and do the analysis on Python.
+
+Major milestone:
+- Imported the SQL query to 'netflix_combined.csv' file, which is a good one to use for analysis in Python
+- Converted all the object data (non-numerical) to numerical
+
+I will do the model building and anything else required tomorrow
+
+May 2, 2023
+
+Created some models and stuff. At the beginning I was excited because there seems to be at least one strong variable to 
+predict the dependent variable -- then I remember that wass how I initially set the original excel file, so yeah..
+
+Major milestone:
+Wrapped up the project by:
+1. Created ANN models to set a benchmark on the target accuracy on other model
+2. Plotted a 3D cluster to see how last payment date (year, month, day) interact and clustered them into two groups (subscription
+status active/not active)
+3. Created log model to see if the model would come close to the ANN
+
+I decided to wrap the project here as I am starting to get bored with this data set and I could not stand hearing the whirring noise
+from my laptop.
